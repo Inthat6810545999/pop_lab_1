@@ -27,7 +27,7 @@ print()
 Your code here
 
 '''
-# German_city = []
+# German_city = []c
 # print("All city in Germany")
 # for dict in cities:
 #     if dict['country'] == 'Germany':
@@ -65,13 +65,28 @@ print(Spain)
 Your code here
 
 '''
+print("The number of unique countries:")
+city_lists = []
+for city in cities:
+    if city['country'] not in city_lists:
+        city_lists.append(city['country'])
+print(len(city_lists))
+print()
 
 # Print the average temperature for all the cities in Germany
 
 '''
+
 Your code here
 
 '''
+print("The average temperature for all the cities in Germany:")
+city_lists = []
+for city in cities:
+    if city['country'] == 'Germany':
+        city_lists.append(float(city['temperature']))
+print(sum(city_lists)/len(city_lists))
+print()
 
 # Print the max temperature for all the cities in Italy
 
@@ -79,3 +94,10 @@ Your code here
 Your code here
 
 '''
+print("The max temperature for all the cities in Italy:")
+city_lists = []
+for city in cities:
+    if city['country'] == 'Italy':
+        city_lists.append(float(city['temperature']))
+print(max(city_lists))
+print()
